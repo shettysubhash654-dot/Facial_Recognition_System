@@ -2,6 +2,8 @@
 
 A FastAPI + browser-webcam face-recognition system using MTCNN, InceptionResnetV1/VGGFace2, cosine similarity, configurable Unknown rejection, SQLite persistence, duplicate-identity protection, and a live Evaluation Lab.
 
+The URL you get inside the codespace = https://vigilant-potato-4j9qg4xwg9wx2jrr6-8000.app.github.dev/
+
 ## Storage architecture
 
 This version intentionally removes JSON persistence and browser `localStorage` for application data.
