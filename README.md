@@ -224,3 +224,41 @@ The check also runs against images already accepted earlier in the same enrollme
 ## GitHub / Codespaces demo
 
 This repository is safe to publish without runtime biometric data. The public-demo configuration uses an ephemeral SQLite database created at runtime. See `GITHUB_DEPLOYMENT.md` for Codespaces setup.
+
+
+## Major Limitations and Future Improvements
+1. Recognition accuracy can vary
+
+Recognition performance may decrease under poor lighting, different face angles, motion blur, low-resolution images, or partial occlusion.
+
+Future improvement: Improve face alignment and image preprocessing, use multiple reference images for each person, and evaluate the model under different lighting, angles, distances, and expressions.
+
+2. Fixed similarity threshold
+
+The system currently uses a fixed recognition threshold, which may not provide the same performance in every environment.
+
+Future improvement: Use a validation dataset to tune the threshold and analyze FAR (False Accept Rate) and FRR (False Reject Rate) at different threshold values.
+
+3. No liveness detection
+
+The current system recognizes a face but does not determine whether it belongs to a real person or is being presented through a photograph or video.
+
+Future improvement: Add an anti-spoofing or liveness-detection module using techniques such as blink detection, facial movement analysis, depth sensing, or a dedicated anti-spoofing model.
+
+4. CPU-based inference can affect real-time performance
+
+Face detection and embedding generation can be computationally expensive, especially during continuous webcam recognition.
+
+Future improvement: Use GPU acceleration, ONNX/TensorRT optimization, frame skipping, face tracking, and asynchronous inference to reduce latency and improve FPS.
+
+5. SQLite is suitable mainly for small-scale deployments
+
+SQLite is simple and efficient for a small number of identities but is not ideal for large-scale systems with many concurrent users and large amounts of biometric data.
+
+Future improvement: Migrate to PostgreSQL or another server-based database and use FAISS or a vector database for faster similarity searches with large numbers of embeddings.
+
+6. Evaluation dataset is limited
+
+The evaluation results depend on the size and diversity of the available test dataset.
+
+Future improvement: Build a larger evaluation dataset containing multiple identities, known and unknown faces, different lighting conditions, poses, expressions, distances, and occlusions, and use additional metrics such as confusion matrices, ROC curves, FAR, FRR, and inference latency.
