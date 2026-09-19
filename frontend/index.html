@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VisionID — Face Recognition Command Center</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>" />
+<link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">◈</div>
+        <div>
+          <div class="brand-name">VISION<span>ID</span></div>
+          <div class="brand-sub">FACE INTELLIGENCE</div>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <a href="#/dashboard" data-route="dashboard"><span class="ic">▣</span>Dashboard</a>
+        <a href="#/recognize" data-route="recognize"><span class="ic">◎</span>Recognize</a>
+        <a href="#/enroll" data-route="enroll"><span class="ic">✚</span>Enroll Identity</a>
+        <a href="#/people" data-route="people"><span class="ic">☰</span>People Directory</a>
+        <a href="#/evaluation" data-route="evaluation"><span class="ic">∿</span>Evaluation Lab</a>
+        <a href="#/notes" data-route="notes"><span class="ic">▤</span>Model Notes</a>
+      </nav>
+
+      <div class="sys-card">
+        <div class="sys-title">SYSTEM STATUS</div>
+        <div class="sys-row"><span>Backend</span><b id="sys-backend" class="ok">…</b></div>
+        <div class="sys-row"><span>Database</span><b id="sys-db" class="ok">…</b></div>
+        <div class="sys-row"><span>Model</span><b id="sys-model" class="ok">…</b></div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="crumb" id="crumb">/ authorized workspace · local inference</div>
+        <div class="top-actions">
+          <span class="pill pill-live" id="live-pill">● authorized use</span>
+          <button class="icon-btn" id="theme-toggle" title="Toggle theme">☀</button>
+        </div>
+      </header>
+
+      <main class="content" id="content"><!-- route renders here --></main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

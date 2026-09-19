@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+.idea/
+.env
+backend/data/*.db-wal
+backend/data/*.db-shm
+backend/data/*.db-journal
+# Do not accidentally commit a runtime database containing real biometric data.
+# Keep the schema/database bootstrap in deployment documentation instead.
+backend/data/face_recognition.db
