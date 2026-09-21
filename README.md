@@ -2,7 +2,7 @@
 
 A FastAPI + browser-webcam face-recognition system using MTCNN, InceptionResnetV1/VGGFace2, cosine similarity, configurable Unknown rejection, SQLite persistence, duplicate-identity protection, and a live Evaluation Lab.
 
-The URL you get inside the codespace =https://studious-chainsaw-x5qr96jv9q7xc964w-8000.app.github.dev/
+The URL you get inside the codespace = https://stunning-giggle-xr5x64gx6pp36g6w-8000.app.github.dev/
 
 ## Storage architecture
 
