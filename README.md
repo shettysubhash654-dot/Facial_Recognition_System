@@ -4,6 +4,9 @@ A FastAPI + browser-webcam face-recognition system using MTCNN, InceptionResnetV
 
 The URL you get inside the codespace = https://stunning-giggle-xr5x64gx6pp36g6w-8000.app.github.dev/
 
+note:- as a limitation of github codespace it will run 4 hours , if closed link will not work
+if current link does not work run manually with below given instructions
+
 ## Storage architecture
 
 This version intentionally removes JSON persistence and browser `localStorage` for application data.
